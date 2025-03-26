@@ -2,7 +2,7 @@
 
 **Project Title:** March Machine Learning Mania 2025 Kaggle Competition ([link](https://www.kaggle.com/competitions/march-machine-learning-mania-2025))
 
-**Git Hub Link**: 
+**Git Hub Link**: https://github.com/anuarun1/Capstone_UCBerk_AIML_2025.git
 
 **Problem Statement\\Business Understanding:**
 
