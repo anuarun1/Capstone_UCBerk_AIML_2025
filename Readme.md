@@ -69,9 +69,11 @@ XGBoost is an ensemble technique that is particularly used when accuracy is a ke
 
 
 ![ANN1](https://github.com/user-attachments/assets/04af0921-9b97-45b4-ae0e-a16b56d342c2)
+
 Figure 6: ANN Model \#1 with 2 layer; Training Vs Validation Accuracy
 
 ![ANN2](https://github.com/user-attachments/assets/f4bbe045-09e5-4ebf-ae57-91b09d9e800a)
+
 Figure 7: ANN Model \#2 with 3 layers,  Training Vs Validation Accuracy
 
 **Summary:**
