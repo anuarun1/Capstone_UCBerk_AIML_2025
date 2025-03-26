@@ -14,15 +14,17 @@ The main parameters that influence the team performance is the team seed and the
 
 Figure 1 and Figure 2 shows the dependency of seed difference on the win probability. Figure 3 shows feature engineering of the over time, taking into taking into account sum, medium, mean, max, min, std dev, skew and nunique. In the actual code, this was implemented for all the features. 
 
-| ![][image1] Figure 1: Win Probability by Seed Difference  |
-| :---: |
+![SeedDiff](https://github.com/user-attachments/assets/e57fd51c-fd03-4a02-84d3-2f0d893fdf58)
+Figure 1: Win Probability by Seed Difference
 
-| ![][image2] Figure 2: Win Rate by Seed % |
-| ----- |
 
-| ![][image3] ![][image4] ![][image5] Figure 3: Feature Engineering of NumOT, taking into account sum, medium, mean, max, min, std dev, skew and nunique |
-| :---- |
+![SeedPerc](https://github.com/user-attachments/assets/c7a3d5e8-b9fe-4d98-a444-e9b266d288c5)
 
+Figure 2: Win Rate by Seed %
+
+![NumOT](https://github.com/user-attachments/assets/1f90a100-737d-4d0f-97f9-a61c590f33f6)
+
+Figure 3: Feature Engineering of NumOT, taking into account sum, medium, mean, max, min, std dev, skew and nunique 
 Data Preparation:
 
 Data is checked for missing data and if any missed data, it was substituted with either 0 or \-1 or imputed with mean depending on the variable. 
@@ -48,12 +50,14 @@ Table 1: Different Model build and evaluation of the model
 A simple model using only the seed difference between the two teams was used first. With logistic regression, even with the single feature the Brier score improved from 0.513 to 0.19.   
 Figure 4 represents the results from the Logistic regression model with single feature. Accuracy of 0.72 was obtained with this model. With feature engineering and increase dataset, the best accuracy that was achieved with logistic regression was 0.75. Results are shown in Figure 5\. Ensemble models were explored to improve the accuracy and improve the Brier score. 
 
-| ![][image6] Figure 4: Win Probability by Seed Difference directly from data  and using Logistic Regression with seed difference as the input feature |
-| ----- |
+![Logistic](https://github.com/user-attachments/assets/0b93304c-9355-4521-985d-4e9820ccf0e7)
 
-| ![][image7]![][image8] Accuracy 0.75 Precision 0.75 Recall 0.75 F1-score 0.75 Figure 5: Confusion Matrix; Accuracy, Precision, Recall, F1-score and ROC Curve |
-| ----- |
+Figure 4: Win Probability by Seed Difference directly from data  and using Logistic Regression with seed difference as the input feature
 
+
+![Logistic2](https://github.com/user-attachments/assets/7b0610ef-12a1-4298-8232-e92549bcd572)
+
+Figure 5: Confusion Matrix; Accuracy, Precision, Recall, F1-score and ROC Curve
 **XGBoost Regression and XGBoost Classifier:**
 
 XGBoost is an ensemble technique that is particularly used when accuracy is a key metric. Both XGBoost based regression and classifier were implemented. Hyperparameter search was performed to identity the optimum parameters. N\_estimator of 5000 with a slow learning rate of 0.03 was chosen as the final optimum parameter. The results from the model were cross validated and the error metrics including log loss and Brier Score were estimated. The results are tabulated in Table 1\. 
@@ -63,11 +67,12 @@ XGBoost is an ensemble technique that is particularly used when accuracy is a ke
  ANN was implemented using  2 layers. Hyper parameter tuning was performed to identify the model parameters. The following parameters were identified as the best parameters. With this model the accuracy between the training and validation was not optimal as see in Figure 6  
 ![][image9]
 
-| ![][image10] Figure 6: ANN Model \#1 with 2 layer; Training Vs Validation Accuracy |
-| :---: |
 
-| ![][image11] Figure 7: ANN Model \#2 with 3 layers,  Training Vs Validation Accuracy  |
-| ----- |
+![ANN1](https://github.com/user-attachments/assets/04af0921-9b97-45b4-ae0e-a16b56d342c2)
+Figure 6: ANN Model \#1 with 2 layer; Training Vs Validation Accuracy
+
+![ANN2](https://github.com/user-attachments/assets/f4bbe045-09e5-4ebf-ae57-91b09d9e800a)
+Figure 7: ANN Model \#2 with 3 layers,  Training Vs Validation Accuracy
 
 **Summary:**
 
